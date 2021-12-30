@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+        ym(87032478, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/87032478" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsiveimages plugin demo</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .block {
+            height: 500px;
+            width: 100%;
+            background-color: #fff
+        }
+
+        .version {
+            text-align: center;
+            color: #ccc;
+            font-size: 12px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .block-example {
+            margin-bottom: 50px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="block" style="max-height: 200px;">
+        <h1 style="text-align: center; padding-top: 50px;">DEMO RESPONSIVE IMAGES PLUGIN</h1>
+        <div class="version"><b>Version: 1.0.0</b></div>
+    </div>
+
+    <div class="block-example">
+        <div>
+            <h2>Examples</h2>
+            <p style="text-align: center;">Change screen width to see image changes</p>
+        </div>
+        <div>
+           <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="./img/image-origin.jpg" 
+                            srcset="./img/image-375w.jpg 375w, ./img/image-720w.jpg 720w, ./img/image-1366w.jpg 1366w, ./img/image-origin@2.jpg 3840w" 
+                            sizes="(max-width: 375px) 375px, (max-width: 720px) 720px, (max-width: 1920px) 1366px, 1920px" 
+                            alt="image demo of plugin responsive images"
+                            width="1920"
+                            height="1280"
+                        >
+                    </div>
+                </div>
+           </div>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'" /></noscript>
+</body>
+
+</html>
