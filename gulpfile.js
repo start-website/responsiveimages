@@ -38,7 +38,7 @@ gulp.task('move-dist-img', function (done) {
 const webpackConfig = {
     mode: isDev ? 'development' : 'production',
     entry: {
-        responsiveimages: './src/js/_responsiveimages.js',
+        'backend-webasyst': './src/js/_backend.js',
     },
     output: {
         filename: '[name].js',
@@ -70,7 +70,7 @@ const webpackConfig = {
 // Webpack - сборщик js модулей
 gulp.task('webpack', function () {
     return gulp.src([
-        './src/js/_responsiveimages.js',
+        './src/js/_backend.js',
     ])
         .pipe(webpack(webpackConfig))
         .pipe(gulp.dest(isDev ? './src/js' : './dist/js'));

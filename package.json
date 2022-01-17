@@ -18,9 +18,8 @@
     },
     "homepage": "https://github.com/start-website/responsiveimages#readme",
     "browserslist": [
-        "defaults",
-        "not ie <= 11",
-        "maintained node versions"
+        "IE 8",
+        "cover 99.5%"
     ],
     "devDependencies": {
         "@babel/core": "^7.10.5",
