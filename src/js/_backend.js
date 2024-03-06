@@ -3,19 +3,19 @@ var app = new Vue({
     el: '.start',
     data: {
         plugin_url: document.querySelector('#plugin_url').value,
-        url: document.querySelector('#url').value,
+        is_php_version_less_7_1: document.querySelector('#is_php_version_less_7_1').value ? true : false,
         custom_css_instruction: false,
         loading: true,
         button_save_disabled: false,
         checkedNames: [],
         // Settings default
         settings: {
-            active_plugin: false,
             metadata_iptc: false,
             remove_images: false,
             webp: false,
             deny_png: false,
             ready_alt: false,
+            lqip: false,
             set_images_sizes_attr: false,
             image_adapter: 'gd',
             forbidden_pages: '',
@@ -24,7 +24,7 @@ var app = new Vue({
             enlarged_images: [],
             image_quality: 80,
             number_iterations: 100,
-            min_width_image: 10
+            min_width_image: 100
         }
     },
 
@@ -88,36 +88,8 @@ var app = new Vue({
         },
     },
 
-    // watch: {
-    //     settings: {
-    //         handler: function handler(settings) {
-    //             console.log(settings) 
-    //             settings.breakpoints = 0           
-    //         },
-    //         deep: true
-    //     }
-    // },
-
     mounted: function () {
-        axios
-            .get(this.url)
-            .then(response => {
-                const settingsDB = response.data.data.result
-
-                // Привидение к числу свойств t-number
-                for (const item in settingsDB) {
-                    if (settingsDB.hasOwnProperty(item)) {
-                        if (/_t-number/gi.test(item)) {
-                            settingsDB[item] = Number(settingsDB[item])
-                        }
-                    }
-                }
-
-                const settingsMerge = Object.assign({}, this.settings, settingsDB)
-                this.settings = settingsMerge
-            })
-            .catch(error => console.log(error))
-            .finally(() => (this.loading = false))
+        this.settings = Object.assign({}, this.settings, settings_backend)
+        this.loading = false
     }
-
 })

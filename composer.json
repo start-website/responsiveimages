@@ -1,0 +1,13 @@
+{
+    "require": {
+        "mrclay/minify": "~3.0.0",
+        "voku/html-min": "^1.0",
+        "cr/hashcli": "dev-master",
+        "searchturbine/phpwee-php-minifier": "dev-master",
+        "dbx123/php-minifier": "^1.0",
+        "websharks/html-compressor": "170420.24924",
+        "doncadavona/html_minifier": "1.0.x-dev"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
